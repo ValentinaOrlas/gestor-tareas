@@ -1,0 +1,43 @@
+/* NewTask.css */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: #ffe4e1;
+  border: 2px solid #ff87a2;
+  border-radius: 8px;
+  max-width: 450px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  font-weight: bold;
+  color: #ff577e;
+  margin-bottom: 5px;
+  font-family: Arial, sans-serif;
+}
+
+form input[type="text"] {
+  padding: 12px;
+  border: 1px solid #ff87a2;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+}
+
+form button {
+  padding: 12px;
+  background-color: #ff87a2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: Arial, sans-serif;
+}
+
+form button:hover {
+  background-color: #ff577e;
+}
+

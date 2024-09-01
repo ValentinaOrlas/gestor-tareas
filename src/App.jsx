@@ -1,3 +1,4 @@
-import { Home } from "./components/Pages/Home/Home"
+import { Home } from "./components/Pages/Home/Home";
+import { TasksProvider } from "./components/Context/Context";
 
-export const App = () => <Home/>;
+export const App = () => <TasksProvider><Home/></TasksProvider>;
