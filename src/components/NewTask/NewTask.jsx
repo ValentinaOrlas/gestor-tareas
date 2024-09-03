@@ -13,23 +13,34 @@ export const NewTask = () => {
   const txtTitle = useRef('');
   const txtDescription = useRef('');
 
-  const handleTitleTask = (event)=> setTitleTask(event.target.value);
+  const handleTitleTask = (event)=> {
+    setTitleTask(event.target.value);
+  };
+  
   const handleDescriptionTask = (event)=> setDescriptionTask(event.target.value);
 
   const handleCreateTask = event =>{
     event.preventDefault();
+
     const newTask = {
       id: uuidv4(),
       title: titleTask,
       description : descriptionTask,
       status : false
     }
+    console.log(newTask);
     
-    context.setTasks([ ...context.tasks, newTask]);
-    context.setFilterTasks([...context.tasks, newTask]);
-
+    if(newTask.title == '' || newTask.description == ''){
+      return alert('Información incompleta');
+    }else{
+      context.setTasks([ ...context.tasks, newTask]);
+      context.setFilterTasks([...context.tasks, newTask]);
+      setTitleTask('');
+      setDescriptionTask('');
+    }
     txtTitle.current.value = '';
     txtDescription.current.value = '';
+    
   }
   return (
     <form >
