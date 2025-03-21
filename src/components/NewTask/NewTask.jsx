@@ -28,7 +28,6 @@ export const NewTask = () => {
       description : descriptionTask,
       status : false
     }
-    console.log(newTask);
     
     if(newTask.title == '' || newTask.description == ''){
       return alert('Información incompleta');
@@ -50,7 +49,7 @@ export const NewTask = () => {
       </fieldset>
       <fieldset>
       <label>Descripción de la tarea</label>
-      <input ref={txtDescription} onChange={handleDescriptionTask} id='txt-title' placeholder="Ingresar descripción" type='text'/>
+      <input ref={txtDescription} onChange={handleDescriptionTask} id='txt-description' placeholder="Ingresar descripción" type='text'/>
       </fieldset>
       <button onClick={handleCreateTask}>Agregar nueva tarea</button>
     </form>
